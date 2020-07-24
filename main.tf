@@ -10,8 +10,8 @@ provider "aws" {
 terraform {
   required_providers {
     tfe = "~> 0.15.0"
-    hostname = var.tfe_host_name
-    token    = var.tfe_org_token
+    hostname = "${var.tfe_host_name}"
+    token    = "${var.tfe_org_token}"
   }
 }
 
