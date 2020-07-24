@@ -32,10 +32,9 @@ resource "aws_s3_bucket" "bucket" {
   }
 }
 
-
 # Consuming the Sentinel module for Core baseline
 module "sentinal" {
-  source             = "tfe.tlzdemo.net/TLZ-Demo/sentinal/tfe"
+  source             = "app.terraform.io/Sentinal/sentinal/tfe"
   version            = "~> 2.0.0"
   tfe_organization   = "TLZ-Demo"
   tfe_workspace      = "S3"
