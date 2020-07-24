@@ -26,7 +26,6 @@ resource "aws_s3_bucket" "bucket" {
     Owner            = "sritej@amazon.com"
   }
 }
-app.terraform.io/WWPS/sentinal/tfe
 
 # Consuming the Sentinel module for Core baseline
 module "sentinal" {
