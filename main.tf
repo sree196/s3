@@ -8,7 +8,7 @@ provider "aws" {
 
 # Sentinel Provider
 provider "tfe" {
-  version  = "~> 0.11.0"
+  version  = "~> 0.15.0"
   hostname = var.tfe_host_name
   token    = var.tfe_org_token
 }
@@ -36,7 +36,7 @@ resource "aws_s3_bucket" "bucket" {
 module "sentinal" {
   source             = "app.terraform.io/Sentinal/sentinal/tfe"
   version            = "~> 2.0.0"
-  tfe_organization   = "TLZ-Demo"
+  tfe_organization   = "Sentinal"
   tfe_workspace      = "S3"
   tfe_policies_path  = "/"
   tfe_vcs_identifier = "sree196/terraform-tfe-sentinal"
