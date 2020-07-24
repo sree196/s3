@@ -7,11 +7,6 @@ provider "aws" {
 }
 
 # Sentinel Provider
-provider "tfe" {
-  hostname = "${var.tfe_host_name}"
-  token    = "${var.tfe_org_token}"
-  version  = "~> 0.15.0"
-}
 
 resource "aws_s3_bucket" "bucket" {
   bucket = var.bucket_name
