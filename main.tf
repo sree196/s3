@@ -26,12 +26,13 @@ resource "aws_s3_bucket" "bucket" {
     Owner            = "sritej@amazon.com"
   }
 }
+app.terraform.io/WWPS/sentinal/tfe
 
 # Consuming the Sentinel module for Core baseline
 module "sentinal" {
-  source             = "app.terraform.io/Sentinal/sentinal/tfe"
+  source             = "app.terraform.io/WWPS/sentinal/tfe"
   version            = "~> 2.0.0"
-  tfe_organization   = "Sentinal"
+  tfe_organization   = "WWPS"
   tfe_workspace      = "S3"
   tfe_policies_path  = "/"
   tfe_vcs_identifier = "sree196/terraform-tfe-sentinal"
