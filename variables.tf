@@ -10,7 +10,7 @@ variable "bucket_name" {
 
 variable "bucket_acl" {
   description = "ACL for S3 bucket: private, public-read, public-read-write, etc"
-  default     = "private"
+  default     = "Public"
 }
 
 variable "kms_key_arn" {
