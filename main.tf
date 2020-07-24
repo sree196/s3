@@ -27,18 +27,6 @@ resource "aws_s3_bucket" "bucket" {
   }
 }
 
-# Consuming the Sentinel module for Core baseline
-module "sentinal" {
-  source             = "app.terraform.io/WWPS/sentinal/tfe"
-  version            = "~> 2.0.0"
-  tfe_organization   = "WWPS"
-  tfe_workspace      = "S3"
-  tfe_policies_path  = "/"
-  tfe_vcs_identifier = "sree196/terraform-tfe-sentinal"
-  tfe_oauth_token_id = var.tfe_vcs_oauth_id
-}
-
-
 output "sse_algorithm" {
   value = aws_s3_bucket.bucket.server_side_encryption_configuration[0].rule[0].apply_server_side_encryption_by_default[0].sse_algorithm
 }
