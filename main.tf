@@ -7,10 +7,12 @@ provider "aws" {
 }
 
 # Sentinel Provider
-provider "tfe" {
-  version  = "~> 0.15.0"
-  hostname = var.tfe_host_name
-  token    = var.tfe_org_token
+terraform {
+  required_providers {
+    tfe = "~> 0.15.0"
+    hostname = var.tfe_host_name
+    token    = var.tfe_org_token
+  }
 }
 
 resource "aws_s3_bucket" "bucket" {
