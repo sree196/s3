@@ -39,7 +39,7 @@ module "sentinal" {
   tfe_organization   = "TLZ-Demo"
   tfe_workspace      = "S3"
   tfe_policies_path  = "/"
-  tfe_vcs_identifier = "RDS/terraform-tfe-sentinal"
+  tfe_vcs_identifier = "sree196/terraform-tfe-sentinal"
   tfe_oauth_token_id = var.tfe_vcs_oauth_id
 }
 
